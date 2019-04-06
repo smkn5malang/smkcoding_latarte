@@ -8,34 +8,16 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.google.android.material.floatingactionbutton.FloatingActionButton
+import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_profil.*
 import kotlinx.android.synthetic.main.app_bar_profil.*
 import kotlinx.android.synthetic.main.content_profil.*
 
 class ProfilActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
-    val list = ArrayList<Recipes>()
-
-    val listTitle = arrayOf(
-        "Pukis",
-        "Brownies",
-        "Lumpia",
-        "Lemper",
-        "Donat",
-        "Bolu Coklat"
-    )
-
-    val listContent = arrayOf(
-        "Google",
-        "Apple",
-        "Microsoft",
-        "Asus",
-        "Zenpone",
-        "Acer"
-    )
+    private var layoutManager: RecyclerView.LayoutManager? = null
+    private var adapter: RecyclerView.Adapter<RecipesAdapter.ViewHolder>? = null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,32 +25,12 @@ class ProfilActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
         setContentView(R.layout.activity_profil)
         setSupportActionBar(toolbar)
 
-        mRecyclerView.setHasFixedSize(true)
-        mRecyclerView.layoutManager = LinearLayoutManager(this)
+        layoutManager = LinearLayoutManager(this)
+        mRecyclerView.layoutManager = layoutManager
 
-        for (i in 0 until listTitle.size) {
+        adapter = RecipesAdapter()
+        mRecyclerView.adapter = adapter
 
-            list.add(Recipes(listTitle.get(i)))
-
-            if (listTitle.size - 1 == i) {
-                // init adapter yang telah dibuat tadi
-                val adapter = RecipesAdapter(list)
-                adapter.notifyDataSetChanged()
-
-                //tampilkan data dalam recycler view
-                mRecyclerView.adapter = adapter
-            }
-
-            if (listContent.size - 1 == i) {
-                // init adapter yang telah dibuat tadi
-                val adapter = RecipesAdapter(list)
-                adapter.notifyDataSetChanged()
-
-                //tampilkan data dalam recycler view
-                mRecyclerView.adapter = adapter
-            }
-
-        }
 
         fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
