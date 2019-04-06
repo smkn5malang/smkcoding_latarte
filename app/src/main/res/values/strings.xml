@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">La Tarte</string>
+    <string name="desclaimer">La Tarte merupakan aplikasi yang dapat membantu Anda
+        menemukan resep kue atau jajanan sehat dengan mudah dan cepat.
+    </string>
+    <string name="title_activity_profil">ProfilActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
 </resources>
