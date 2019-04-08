@@ -11,21 +11,36 @@ import com.google.android.material.snackbar.Snackbar
 data class Recipes (val listTitle: String )
 
 class RecipesAdapter : RecyclerView.Adapter<RecipesAdapter.ViewHolder>(){
-    private val titles = arrayOf("Chapter One",
-        "Chapter Two", "Chapter Three", "Chapter Four",
-        "Chapter Five", "Chapter Six", "Chapter Seven",
+    private val images = intArrayOf(
+        R.drawable.logo,
+        R.drawable.profil,
+        R.drawable.logo,
+        R.drawable.profil,
+        R.drawable.logo,
+        R.drawable.profil,
+        R.drawable.logo,
+        R.drawable.profil)
+
+    private val titles = arrayOf(
+        "Chapter One",
+        "Chapter Two",
+        "Chapter Three",
+        "Chapter Four",
+        "Chapter Five",
+        "Chapter Six",
+        "Chapter Seven",
         "Chapter Eight")
 
-    private val content = arrayOf("Item one details", "Item two details",
-        "Item three details", "Item four details",
-        "Item file details", "Item six details",
-        "Item seven details", "Item eight details")
+    private val content = arrayOf(
+        "Item one details",
+        "Item two details",
+        "Item three details",
+        "Item four details",
+        "Item five details",
+        "Item six details",
+        "Item seven details",
+        "Item eight details")
 
-    private val images = intArrayOf(R.drawable.logo,
-        R.drawable.profil, R.drawable.logo,
-        R.drawable.profil, R.drawable.logo,
-        R.drawable.profil, R.drawable.logo,
-        R.drawable.profil)
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 

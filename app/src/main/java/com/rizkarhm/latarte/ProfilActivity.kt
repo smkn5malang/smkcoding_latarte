@@ -60,35 +60,35 @@ class ProfilActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
         return true
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        when (item.itemId) {
-            R.id.action_settings -> return true
-            else -> return super.onOptionsItemSelected(item)
-        }
-    }
+//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+//        // Handle action bar item clicks here. The action bar will
+//        // automatically handle clicks on the Home/Up button, so long
+//        // as you specify a parent activity in AndroidManifest.xml.
+//        when (item.itemId) {
+//            R.id.action_settings -> return true
+//            else -> return super.onOptionsItemSelected(item)
+//        }
+//    }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         // Handle navigation view item clicks here.
         when (item.itemId) {
-            R.id.nav_camera -> {
+            R.id.nav_home -> {
                 // Handle the camera action
             }
-            R.id.nav_gallery -> {
+            R.id.nav_favorite -> {
 
             }
-            R.id.nav_slideshow -> {
+            R.id.nav_history -> {
 
             }
-            R.id.nav_manage -> {
+            R.id.nav_setting-> {
 
             }
-            R.id.nav_share -> {
+            R.id.nav_login -> {
 
             }
-            R.id.nav_send -> {
+            R.id.nav_about -> {
 
             }
         }

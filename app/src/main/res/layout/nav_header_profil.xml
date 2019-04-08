@@ -25,8 +25,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="@dimen/nav_header_vertical_spacing"
-            android:text="La tarte"
+            android:paddingLeft="8dp"
+            android:textColor="#ffff"
+            android:text="Username"
+            android:textAllCaps="true"
+            android:textStyle="bold"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#ffff"
+            android:paddingLeft="8dp"
+            android:text="Account"
+            android:textStyle="italic"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+
 
 
 </LinearLayout>
