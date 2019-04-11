@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "130672138341",
+    "firebase_url": "https://latarte-4f4bb.firebaseio.com",
+    "project_id": "latarte-4f4bb",
+    "storage_bucket": "latarte-4f4bb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:130672138341:android:f233eb99ab7206ec",
+        "android_client_info": {
+          "package_name": "com.rizkarhm.latarte"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "130672138341-7i3bdk5qpkm66ajelpijm0nus2adrq2v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rizkarhm.latarte",
+            "certificate_hash": "8e2da245b26902e8028b96007e78d203db9afe42"
+          }
+        },
+        {
+          "client_id": "130672138341-bvevbtc1ulanjnffuj0mhg19kf20urge.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAf7lNx4sx31XbzrK_YLJsa7FRnpsKG2gw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "130672138341-bvevbtc1ulanjnffuj0mhg19kf20urge.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

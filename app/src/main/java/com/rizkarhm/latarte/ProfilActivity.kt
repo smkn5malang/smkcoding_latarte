@@ -1,5 +1,6 @@
 package com.rizkarhm.latarte
 
+import android.content.Intent
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
@@ -8,8 +9,10 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.database.DatabaseReference
 import kotlinx.android.synthetic.main.activity_profil.*
 import kotlinx.android.synthetic.main.app_bar_profil.*
 import kotlinx.android.synthetic.main.content_profil.*
@@ -18,6 +21,8 @@ class ProfilActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
 
     private var layoutManager: RecyclerView.LayoutManager? = null
     private var adapter: RecyclerView.Adapter<RecipesAdapter.ViewHolder>? = null
+
+    lateinit var ref : DatabaseReference
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -74,7 +79,7 @@ class ProfilActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
         // Handle navigation view item clicks here.
         when (item.itemId) {
             R.id.nav_home -> {
-                // Handle the camera action
+                R.id.action_bar_container
             }
             R.id.nav_favorite -> {
 
@@ -86,7 +91,8 @@ class ProfilActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
 
             }
             R.id.nav_login -> {
-
+                val intent = Intent(this, LoginActivity::class.java )
+                startActivity(intent)
             }
             R.id.nav_about -> {
 
