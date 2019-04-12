@@ -9,11 +9,24 @@
         tools:showIn="@layout/app_bar_profil"
         tools:context=".ProfilActivity">
 
+    <WebView
+            android:id="@+id/myWebView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
-    <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/mRecyclerView"
+    <ProgressBar
+            android:id="@+id/progressBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10sp"/>
+            android:minHeight="50dp"
+            android:minWidth="50dp"
+            android:layout_centerInParent="true"/>
+
+
+    <!--<androidx.recyclerview.widget.RecyclerView-->
+            <!--android:id="@+id/mRecyclerView"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_margin="10sp"/>-->
 
 </RelativeLayout>

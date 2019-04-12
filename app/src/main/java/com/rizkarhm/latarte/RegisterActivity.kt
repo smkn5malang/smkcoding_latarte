@@ -33,6 +33,11 @@ class RegisterActivity : AppCompatActivity() {
             val buttonRegister = Intent(applicationContext, ProfilActivity::class.java)
             startActivity(buttonRegister)
         }
+        val toLogin = findViewById<Button>(R.id.textToLogin) as TextView
+        toLogin.setOnClickListener {
+            val intentRegister = Intent(applicationContext, LoginActivity::class.java)
+            startActivity(intentRegister)
+            finish()}
     }
 
     public override fun onStart() {
@@ -68,10 +73,8 @@ class RegisterActivity : AppCompatActivity() {
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "createUserWithEmail:failure", task.exception)
-                            Toast.makeText(
-                                baseContext, "Authentication failed.",
-                                Toast.LENGTH_SHORT
-                            ).show()
+                            Toast.makeText(baseContext, "Authentication failed.",
+                                Toast.LENGTH_SHORT).show()
                             updateUI(null)
                         }
                     }
@@ -83,5 +86,9 @@ class RegisterActivity : AppCompatActivity() {
 
     private fun updateUI(user: FirebaseUser?) {
 
+
     }
+
+
+
 }
