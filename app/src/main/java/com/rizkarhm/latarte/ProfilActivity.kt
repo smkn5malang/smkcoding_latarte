@@ -37,9 +37,7 @@ class ProfilActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
         mRecyclerView.adapter = adapter
 
 
-        fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
+        fab.setOnClickListener {
         }
 
         val toggle = ActionBarDrawerToggle(

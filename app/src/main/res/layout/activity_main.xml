@@ -14,7 +14,7 @@
             android:textColor="@android:color/white"
             android:src="@drawable/logoo"
             android:layout_centerHorizontal="true"
-            android:background="@drawable/side_nav_bar"
+            android:background="@drawable/gradient_bg"
             android:padding="50dp"/>
 
 </RelativeLayout>

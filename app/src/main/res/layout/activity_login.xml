@@ -1,42 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<ScrollView
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         tools:context=".LoginActivity"
-        android:padding="50sp">
+        android:padding="50sp"
+        android:background="@drawable/gradient_bg"
+        android:id="@+id/scrollLogin">
 
-    <EditText
+    <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Nama"
-            android:id="@+id/input_nama"
-            android:inputType="text"/>
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="E-mail"
-            android:id="@+id/input_email"
-            android:layout_below="@+id/input_nama"
-            android:inputType="textEmailAddress"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LOGIN"
+                android:fontFamily="monospace"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20sp"/>
 
-    <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Password"
-            android:id="@+id/input_pass"
-            android:layout_below="@+id/input_email"
-            android:inputType="textPassword"/>
+        <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:background="@android:color/white"
+                android:id="@+id/input_data"
+                app:cardCornerRadius="20dp">
 
-    <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="LOGIN"
-            android:id="@+id/button_login"
-            android:layout_below="@id/input_email"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="50sp"/>
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="30dp">
 
-</RelativeLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/inputLayoutEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/inputEditTextEmailLogin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/hint_email"
+                            android:inputType="text"
+                            android:maxLines="1"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/inputLayoutPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/inputEditTextPasswordLogin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/hint_password"
+                            android:inputType="textPassword"
+                            android:maxLines="1"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="LOGIN"
+                android:textColor="@android:color/white"
+                android:id="@+id/button_login"
+                android:layout_below="@id/scrollLogin"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/button_login_register"
+                android:layout_marginTop="20sp"/>
+
+        <TextView
+                android:id="@+id/textToRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Belum punya akun? Daftar."
+                android:textColor="@android:color/white"
+                android:layout_gravity="center"
+                android:layout_marginTop="10sp"/>
+
+    </LinearLayout>
+
+</ScrollView>
