@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import android.widget.ProgressBar
 
 class MainActivity : AppCompatActivity() {
 
@@ -28,6 +29,21 @@ class MainActivity : AppCompatActivity() {
 
         //Navigate with delay
         mDelayHandler!!.postDelayed(mRunnable, SPLASH_DELAY)
+
+//        val progressBar = findViewById<ProgressBar>(R.id.loading) as ProgressBar
+//        var barStatus = 0
+//        Thread(Runnable {
+//            while (barStatus < 100)
+//            {
+//                barStatus +=1
+//                    try {
+//                        Thread.sleep(30)
+//                        progressBar.setProgress(barStatus)
+//                    }catch (exp:InterruptedException){
+//                        exp.printStackTrace()
+//                    }
+//            }
+//        }).start()
     }
 
     public override fun onDestroy() {

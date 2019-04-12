@@ -46,6 +46,8 @@ class ProfilActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
 
 
         fab.setOnClickListener {
+            val intent = Intent(this, AddRecipesActivity::class.java)
+            startActivity(intent)
         }
 
         val toggle = ActionBarDrawerToggle(
@@ -61,7 +63,7 @@ class ProfilActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
 
         mWebView!!.webViewClient = MyWebViewClient()
         mWebView!!.webChromeClient = WebChromeClient()
-        mWebView!!.loadUrl("https://www.fimela.com/tag/resep-kue")
+        mWebView!!.loadUrl("https://selerasa.com/Aneka-Resep-Kue/")
 
         mWebView!!.webViewClient = object : WebViewClient() {
             override fun onPageFinished(view: WebView?, url: String?) {
@@ -81,7 +83,7 @@ class ProfilActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
 
     private inner class MyWebViewClient : WebViewClient() {
         override fun shouldOverrideUrlLoading(view: WebView, url: String): Boolean {
-            if (Uri.parse(url).host == "https://www.fimela.com/tag/resep-kue") {
+            if (Uri.parse(url).host == "https://selerasa.com/Aneka-Resep-Kue/") {
                 return false
             } else {
                 val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
@@ -145,3 +147,8 @@ class ProfilActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
         return true
     }
 }
+
+//Famela : https://www.fimela.com/tag/resep-kue
+//Bolu Cookpad : https://cookpad.com/id/cari/kue%20bolu
+//kue cookpad : https://cookpad.com/id/cari/kue
+//aneka resep : https://selerasa.com/Aneka-Resep-Kue/
